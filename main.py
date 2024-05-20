@@ -3,7 +3,7 @@ from instagrapi import Client
 from instagrapi.types import Track # Music for reel
 
 # Importing credentials of IG account from file
-import credentials.txt
+import credentials.py
 
 cl = Client()
 
