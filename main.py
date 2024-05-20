@@ -3,25 +3,32 @@ from instagrapi import Client
 from instagrapi.types import Track # Music for reel
 
 # Importing credentials of IG account from file
-import credentials as cred
+with open("creds.txt", "r") as f:
+  lines = f.read().splitlines()
+  USERNAME = lines[0]
+  PASSWORD = lines[1]
 
 cl = Client()
 
-cl.login(cred.ACCOUNT_USERNAME, cred.ACCOUNT_PASSWORD)
+cl.login(USERNAME, PASSWORD)
 photo_path = 'assets/postpic.png'
 caption = 'Hello fellas, it\'s time to get off of Instagram!'
 
 # Upload photo
-cl.photo_upload(photo_path, caption)
+#cl.photo_upload(photo_path, caption)
 
 reel_path = 'assets/reelvid.mp4'
 thumbnail_path = 'assets/thumbnail.jpg'
+#usertags = [Usertag(user=USERNAME, x=0.1, y=0.1)]
+#location = Location(name='Russia, Saint-Petersburg', lat=59.96, lng=30.29)
 
 # Upload a reel
 #cl.clip_upload(reel_path, caption, thumbnail_path)
 
+#--------------------------------------
+
 # Find track
-#tracks = cl.search_music("Murder Sh!t - Bigbabygucci")
+#tracks = cl.search_music("Murder Sh!t - Bigbabygucci")[0].dict()
 #print(tracks)
 
 #Default start time is 40500
@@ -47,8 +54,9 @@ track = Track(
     duration_in_ms=108970,
     dark_message=None,
     allows_saving=True,
-    territory_validity_periods={})
+    territory_validity_periods={}
+    )
 
 
 # Upload a reel with music
-cl.clip_upload(reel_path, caption, thumbnail_path, track)
+cl.clip_upload_as_reel_with_music(reel_path, caption, thumbnail_path, tracks)
