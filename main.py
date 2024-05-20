@@ -3,7 +3,7 @@ from instagrapi import Client
 from instagrapi.types import Track # Music for reel
 
 # Importing credentials of IG account from file
-with open("creds.txt", "r") as f:
+with open("credentials.txt", "r") as f:
   lines = f.read().splitlines()
   USERNAME = lines[0]
   PASSWORD = lines[1]
