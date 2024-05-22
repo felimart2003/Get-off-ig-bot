@@ -1,12 +1,12 @@
+import os # Github USERNAME, PASSWORD secret
+import random # Used to choose a random song for the reel
+
 # Import instagrapi
 from instagrapi import Client
 from instagrapi.types import Track # Music for reel
 
-# Importing credentials of IG account from file
-with open("credentials.txt", "r") as f:
-  lines = f.read().splitlines()
-  USERNAME = lines[0]
-  PASSWORD = lines[1]
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 
 cl = Client()
 
@@ -29,10 +29,6 @@ thumbnail_path = 'assets/thumbnail.jpg'
 
 # Upload a reel
 #cl.clip_upload(reel_path, caption, thumbnail_path)
-
-# Find track
-#tracks = cl.search_music("Murder Sh!t - Bigbabygucci")
-#print(tracks)
 
 
 # Murder Sh!t by BIGBABYGUCCI
@@ -90,5 +86,8 @@ Rokstarr = Track(
 
 songs = [Murder, Rokstarr]
 
+# Generating random number to choose song for reel
+random_song_num = random.randint(0, (len(songs) - 1))
+
 # Upload a reel with music
-cl.clip_upload_as_reel_with_music(reel_path, caption, songs[1])
+cl.clip_upload_as_reel_with_music(reel_path, caption, songs[random_song_num])
