@@ -17,7 +17,7 @@ photo_path = 'assets/postpic.png'
 caption = 'Hello fellas, it\'s time to get off of Instagram!'
 
 # Upload photo
-#cl.photo_upload(photo_path, caption)
+cl.photo_upload(photo_path, caption)
 
 #--------------------REELS--------------------
 
