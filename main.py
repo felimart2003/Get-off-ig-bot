@@ -31,7 +31,7 @@ def Upload_Reel():
     cl.clip_upload(reel_path, caption, thumbnail_path)
 
 # Organize songs
-songs = [Murder, Rokstarr]
+songs = [Murder, Rokstarr, aisatsana]
 # Generating random number to choose song for reel
 random_song_num = random.randint(0, (len(songs) - 1))
 
@@ -50,8 +50,15 @@ def Run_IG_Posting():
   Upload_Reel_Music()
 
 
+# Find metadata for a song
+def Search_Music(song_to_search):
+    Login()
+    #song_to_search = ""
+    print(cl.search_music(song_to_search))
+
+
 if __name__ == "__main__":
     Run_IG_Posting()
 
-    # Find metadata for a song
-    #print(cl.search_music("https://open.spotify.com/track/5ljMlD10En5rRGZU0cs2Np?si=f91626653e204558"))
+    # print("Seaching music...")
+    # Search_Music('aisatsana [102] - Aphex Twin')

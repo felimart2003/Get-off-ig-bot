@@ -50,3 +50,27 @@ Rokstarr = Track(
     territory_validity_periods={}
     )
 
+# aisatsana [102] by Aphex Twin
+aisatsana = Track(
+    id='1998088723840796',
+    title='aisatsana [102]',
+    subtitle='',
+    display_artist='Aphex Twin',
+    audio_cluster_id=480332232417106,
+    artist_id=None,
+    cover_artwork_uri='https://cdn.fbsbx.com/v/t65.14500-21/47506134_273456399947306_412867732921384960_n.jpg?stp=dst-jpg_p526x296&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=tPuNA6qoqF4Q7kNvgGD6Y5L&_nc_ht=cdn.fbsbx.com&oh=00_AYCyjshlwRP4AgLXyGVAVngmGw1s2wwKnfiPZyqTVNQ1IQ&oe=6650B622',
+    cover_artwork_thumbnail_uri='https://cdn.fbsbx.com/v/t65.14500-21/47506134_273456399947306_412867732921384960_n.jpg?stp=dst-jpg_s168x128&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=tPuNA6qoqF4Q7kNvgGD6Y5L&_nc_ht=cdn.fbsbx.com&oh=00_AYCfBgQ-dIXiW9eCXIDG51xgiuvQvLAr__ltwt-gnjScug&oe=6650B622',
+    progressive_download_url='https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/228603661_145868187596727_3099492138626359170_n.m4a?_nc_cat=107&ccb=1-7&_nc_sid=c2de2f&_nc_ohc=sIdibF8jhf8Q7kNvgHi9oA-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-yyz1-1.cdninstagram.com&oh=00_AYAYnX8z615BHzyR5hnSCxcClu0bcJpj2J-vJpfbR5oXgg&oe=6654A6CF',
+    fast_start_progressive_download_url='https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/228603661_145868187596727_3099492138626359170_n.m4a?_nc_cat=107&ccb=1-7&_nc_sid=c2de2f&_nc_ohc=sIdibF8jhf8Q7kNvgHi9oA-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-yyz1-1.cdninstagram.com&oh=00_AYAYnX8z615BHzyR5hnSCxcClu0bcJpj2J-vJpfbR5oXgg&oe=6654A6CF',
+    reactive_audio_download_url=None,
+    highlight_start_times_in_ms=[49500, 87000, 2500],
+    is_explicit=False,
+    dash_manifest='<?xml version="1.0" encoding="UTF-8"?>\n<!--Generated with https://github.com/google/shaka-packager version v1.6.0-release-->\n<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cenc="urn:mpeg:cenc:2013" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" minBufferTime="PT2S" type="static" mediaPresentationDuration="PT321.923S">\n  <Period id="0">\n    <AdaptationSet id="0" contentType="audio" subsegmentAlignment="true">\n      <Representation id="0" bandwidth="129996" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">\n        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>\n        <BaseURL>https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/43946055_911234802403634_6749173151520784384_n.m4a?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=c2de2f&amp;_nc_ohc=bskvw-S_oQsQ7kNvgG2CLsl&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;oh=00_AYD2X2mdGrmsab8JuWbfhdfjctH6pKdLsCAtyMnvQJcX8Q&amp;oe=665496B9</BaseURL>\n        <SegmentBase indexRange="741-2704" timescale="48000">\n          <Initialization range="0-740"/>\n        </SegmentBase>\n      </Representation>\n    </AdaptationSet>\n  </Period>\n</MPD>\n',
+    uri='https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/43946055_911234802403634_6749173151520784384_n.m4a?_nc_cat=104&ccb=1-7&_nc_sid=c2de2f&_nc_ohc=bskvw-S_oQsQ7kNvgG2CLsl&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-yyz1-1.cdninstagram.com&oh=00_AYD2X2mdGrmsab8JuWbfhdfjctH6pKdLsCAtyMnvQJcX8Q&oe=665496B9',
+    has_lyrics=False,
+    audio_asset_id=1998088723840796,
+    duration_in_ms=321880,
+    dark_message=None,
+    allows_saving=True,
+    territory_validity_periods={}
+      )
