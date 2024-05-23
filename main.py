@@ -18,7 +18,19 @@ def Login():
 
 # Upload photo
 photo_path = 'assets/postpic.png'
-caption = 'Hello fellas, it\'s time to get off of Instagram!'
+caption = '''
+.
+.
+.
+.
+.
+.
+HASHTAGS:
+#getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #JoeBiden #Biden #DonaldTrump #Trump \
+#monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogame \
+#fortnite #rocketleague #leagueoflegends #lol #GTA5 #GTA6 #CIV6 #apexlegends #minecraft #EVEOnline #EpicGames \
+#taylorswift #lanadelrey #kendricklamar #drake #suffering #cry #cringe #hungry #takeabreak #relax #fun #chill #vibes
+'''
 def Upload_Photo():
     cl.photo_upload(photo_path, caption)
 
