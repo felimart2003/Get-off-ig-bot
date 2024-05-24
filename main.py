@@ -18,12 +18,7 @@ def Login():
 
 # Upload photo
 photo_path = 'assets/postpic.png'
-caption = '''Hello fellas, it's time to get off Instagram \
-HASHTAGS: \
-#getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #JoeBiden #Biden #DonaldTrump #Trump \
-#monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogame \
-#fortnite #rocketleague #leagueoflegends #lol #GTA5 #GTA6 #CIV6 #apexlegends #minecraft #EVEOnline
-'''
+caption = "Hello fellas, it's time to get off Instagram \n.\n.\n.\nHASHTAGS: \n#getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #joebiden #biden #donaldtrump #Trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogame #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #apexlegends #minecraft #eveonline"
 def Upload_Photo():
     cl.photo_upload(photo_path, caption)
 
