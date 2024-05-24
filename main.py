@@ -17,7 +17,7 @@ def Login():
     cl.login(USERNAME, PASSWORD)
 
 # Upload photo
-photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait.png', 'assets/post_pics/zuck_portrait2.png']
+photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait_dark.jpg', 'assets/post_pics/zuck_portrait_light.png']
 random_photo_path = random.choice(photos) # Photo to be uploaded
 caption = "Hello again fellas, it's time to get off Instagram. PROTIP: Like this post so the algorithm gives you more of these posts in the future. HASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #joebiden #biden #donaldtrump #Trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogame #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #apexlegends #minecraft #eveonline"
 def Upload_Photo():
