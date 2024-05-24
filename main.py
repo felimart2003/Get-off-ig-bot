@@ -1,6 +1,6 @@
 import os # Github USERNAME, PASSWORD secret
 #from time import sleep
-import random # Used to choose a random song for the reel
+import random # Used to choose a random pic for post and song for reel
 
 # Import instagrapi
 from instagrapi import Client
@@ -14,13 +14,14 @@ cl = Client()
 USERNAME = os.getenv('USERNAME')
 PASSWORD = os.getenv('PASSWORD')
 def Login(): 
-   cl.login(USERNAME, PASSWORD)
+    cl.login(USERNAME, PASSWORD)
 
 # Upload photo
-photo_path = 'assets/postpic.png'
-caption = "Hello fellas, it's time to get off Instagram \n.\n.\n.\nHASHTAGS: \n#getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #joebiden #biden #donaldtrump #Trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogame #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #apexlegends #minecraft #eveonline"
+photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait.png', 'assets/post_pics/zuck_portrait2.png']
+random_photo_path = random.choice(photos) # Photo to be uploaded
+caption = "Hello again fellas, it's time to get off Instagram. PROTIP: Like this post so the algorithm gives you more of these posts in the future. HASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #joebiden #biden #donaldtrump #Trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogame #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #apexlegends #minecraft #eveonline"
 def Upload_Photo():
-    cl.photo_upload(photo_path, caption)
+    cl.photo_upload(random_photo_path, caption)
 
 # Upload a reel
 reel_path = 'assets/reelvid.mp4'
@@ -33,11 +34,11 @@ def Upload_Reel():
 # Organize songs
 songs = [Murder, Rokstarr, aisatsana]
 # Generating random number to choose song for reel
-random_song_num = random.randint(0, (len(songs) - 1))
+random_song = random.choice(songs)
 
 # Upload a reel with music
 def Upload_Reel_Music():
-   cl.clip_upload_as_reel_with_music(reel_path, caption, songs[random_song_num])
+    cl.clip_upload_as_reel_with_music(reel_path, caption, random_song)
 
 
 #commenting out the sleeps to test if my account will get suspended again after I sucessfully appealed against my account suspension
