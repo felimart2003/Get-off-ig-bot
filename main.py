@@ -19,7 +19,7 @@ def Login():
 # Upload photo
 photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait_dark.jpg', 'assets/post_pics/zuck_portrait_light.png']
 random_photo_path = random.choice(photos) # Photo to be uploaded
-caption = "Hello again fellas, it's time to get off Instagram. PROTIP: Like this post so the algorithm gives you more of these posts in the future. HASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels"
+caption = "Hello again fellas, it's time to get off Instagram. PROTIP: Like this post so the algorithm gives you more of these posts in the future. \nHASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels"
 def Upload_Photo():
     cl.photo_upload(random_photo_path, caption)
 
