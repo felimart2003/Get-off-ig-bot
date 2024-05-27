@@ -73,4 +73,28 @@ aisatsana = Track(
     dark_message=None,
     allows_saving=True,
     territory_validity_periods={}
-      )
+    )
+
+# Candy Shop by 50 Cent
+Candy_Shop = Track(id='644934336050784',
+    title='Candy Shop (feat. Olivia)',
+    subtitle='',
+    display_artist='50 Cent',
+    audio_cluster_id=2290757857685361,
+    artist_id=None,
+    cover_artwork_uri='https://cdn.fbsbx.com/v/t65.14500-21/86876054_1813529508780533_226884907291377664_n.jpg?stp=dst-jpg_p526x296&_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FKMyEvp_F4kQ7kNvgFpeLi2&_nc_ht=cdn.fbsbx.com&oh=00_AYBnk9JAaU44TqTQjAU7qMG5WQ1pYvgz9EVcSGyuPjPB2A&oe=6655ED7D',
+    cover_artwork_thumbnail_uri='https://cdn.fbsbx.com/v/t65.14500-21/86876054_1813529508780533_226884907291377664_n.jpg?stp=dst-jpg_s168x128&_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FKMyEvp_F4kQ7kNvgFpeLi2&_nc_ht=cdn.fbsbx.com&oh=00_AYA9AycjGUYcqS3QheMQsQZWLgLL4nRW7bswZwavBgBMZQ&oe=6655ED7D',
+    progressive_download_url='https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/218321255_851644442124827_1747685447217168810_n.m4a?_nc_cat=105&ccb=1-7&_nc_sid=c2de2f&_nc_ohc=xHriIUq2qAwQ7kNvgH1c1J8&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-yyz1-1.cdninstagram.com&oh=00_AYAQ9VHvs7G_3AO7nAv2MpbAIrpyiCAqeIzG2MpRdMSwkw&oe=6659E5FC',
+    fast_start_progressive_download_url='https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/218321255_851644442124827_1747685447217168810_n.m4a?_nc_cat=105&ccb=1-7&_nc_sid=c2de2f&_nc_ohc=xHriIUq2qAwQ7kNvgH1c1J8&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-yyz1-1.cdninstagram.com&oh=00_AYAQ9VHvs7G_3AO7nAv2MpbAIrpyiCAqeIzG2MpRdMSwkw&oe=6659E5FC',
+    reactive_audio_download_url=None,
+    highlight_start_times_in_ms=[4000],
+    is_explicit=True,
+    dash_manifest='<?xml version="1.0" encoding="UTF-8"?>\n<!--Generated with https://github.com/google/shaka-packager version v1.6.0-release-->\n<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cenc="urn:mpeg:cenc:2013" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" minBufferTime="PT2S" type="static" mediaPresentationDuration="PT209.149S">\n  <Period id="0">\n    <AdaptationSet id="0" contentType="audio" subsegmentAlignment="true">\n      <Representation id="0" bandwidth="130007" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">\n        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>\n        <BaseURL>https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/87643895_637606997003445_5745857546950803456_n.m4a?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=c2de2f&amp;_nc_ohc=-fXED5IOdlkQ7kNvgGJcDxm&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_ht=scontent-yyz1-1.cdninstagram.com&amp;oh=00_AYDLQ0CdipIMTxP7DJLwghKHEdlUizmAvwN4uHrZtlqyjA&amp;oe=6659D547</BaseURL>\n        <SegmentBase indexRange="741-2032" timescale="48000">\n          <Initialization range="0-740"/>\n        </SegmentBase>\n      </Representation>\n    </AdaptationSet>\n  </Period>\n</MPD>\n',
+    uri='https://scontent-yyz1-1.cdninstagram.com/v/t39.12897-6/87643895_637606997003445_5745857546950803456_n.m4a?_nc_cat=1&ccb=1-7&_nc_sid=c2de2f&_nc_ohc=-fXED5IOdlkQ7kNvgGJcDxm&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-yyz1-1.cdninstagram.com&oh=00_AYDLQ0CdipIMTxP7DJLwghKHEdlUizmAvwN4uHrZtlqyjA&oe=6659D547',
+    has_lyrics=True,
+    audio_asset_id=644934336050784,
+    duration_in_ms=209106,
+    dark_message=None,
+    allows_saving=True,
+    territory_validity_periods={}
+    )
