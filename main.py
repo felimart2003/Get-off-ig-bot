@@ -18,8 +18,8 @@ def Login():
 # Upload photo
 photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait_dark.jpg', 'assets/post_pics/zuck_portrait_light.png']
 random_photo_path = random.choice(photos) # Photo to be uploaded
-#1507 chars for caption (\n is 1)
-caption = "Hello again fellas, it's time to get off Instagram.\nPROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\nHASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels #getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #joebiden #biden #donaldtrump #trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogames #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #apexlegends #minecraft #eveonline #epicgames #taylorswift #lanadelrey #kendricklamar #drake #suffering #cry #cringe #hungry #takeabreak #relax #fun #chill #vibes"
+#510 chars
+caption = "Hello again fellas, it's time to get off Instagram.\nPROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\nHASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #biden #trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #cars #videogames #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #minecraft #eveonline #epicgames #taylorswift #lanadelrey #kendricklamar #drake #suffering #takeabreak"
 def Upload_Photo():
     cl.photo_upload(random_photo_path, caption)
 
@@ -41,7 +41,7 @@ random_song = random.choice(songs)
 def Upload_Reel_Music():
   if random_reel_path == 'assets/reel_vids/zuck.mp4':
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, Candy_Shop)
-  cl.clip_upload_as_reel_with_music(random_reel_path, caption, Candy_Shop)
+  cl.clip_upload_as_reel_with_music(random_reel_path, caption, random_song)
 
 
 #commenting out the sleeps to test if my account will get suspended again after I sucessfully appealed against my account suspension
