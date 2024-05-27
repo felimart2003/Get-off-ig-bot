@@ -10,15 +10,16 @@ from tracks import *
 
 # Login to client
 cl = Client()
-USERNAME = #os.getenv('USERNAME')
-PASSWORD = #os.getenv('PASSWORD')
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 def Login(): 
     cl.login(USERNAME, PASSWORD)
 
 # Upload photo
 photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait_dark.jpg', 'assets/post_pics/zuck_portrait_light.png']
 random_photo_path = random.choice(photos) # Photo to be uploaded
-caption = "Hello again fellas, it's time to get off Instagram. PROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\nHASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels"
+#1507 chars for caption (\n is 1)
+caption = "Hello again fellas, it's time to get off Instagram.\nPROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\nHASHTAGS: #getoffinstagram #addiction #fyp #foryou #explore #reels #getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #joebiden #biden #donaldtrump #trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #sad #angry #happy #positive #excited #cars #videogames #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #apexlegends #minecraft #eveonline #epicgames #taylorswift #lanadelrey #kendricklamar #drake #suffering #cry #cringe #hungry #takeabreak #relax #fun #chill #vibes"
 def Upload_Photo():
     cl.photo_upload(random_photo_path, caption)
 
