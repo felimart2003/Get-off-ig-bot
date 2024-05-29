@@ -56,10 +56,10 @@ random_song = random.choice(songs)
 def Upload_Reel_Music():
   if random_reel_path == 'assets/reel_vids/zuck.mp4':
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, Candy_Shop)
-  cl.clip_upload_as_reel_with_music(random_reel_path, caption, random_song)
+else:
+    cl.clip_upload_as_reel_with_music(random_reel_path, caption, random_song)
 
 
-# commenting out the sleeps to test if my account will get suspended again after I sucessfully appealed against my account suspension
 # Control functions to be run
 def Run_IG_Posting():
   print("Posting on Instagram...")
@@ -78,9 +78,9 @@ def Search_Music(song_to_search):
     print(cl.search_music(song_to_search))
 
 def main():
-    #Run_IG_Posting()
+    Run_IG_Posting()
 
-    Search_Music("purple substance") # <--- Put song to search here
+    #Search_Music("purple substance") # <--- Put song to search here
 
 if __name__ == "__main__":
   main()
