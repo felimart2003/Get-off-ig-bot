@@ -1,6 +1,5 @@
 import os # Github USERNAME, PASSWORD secret
-#from time import sleep
-import random # Used to choose a random song for the reel
+import random # Used to choose a random pic for post and song for reel
 
 # Import instagrapi
 from instagrapi import Client
@@ -14,51 +13,74 @@ cl = Client()
 USERNAME = os.getenv('USERNAME')
 PASSWORD = os.getenv('PASSWORD')
 def Login(): 
-   cl.login(USERNAME, PASSWORD)
+  cl.login(USERNAME, PASSWORD)
 
 # Upload photo
-photo_path = 'assets/postpic.png'
-caption = 'Hello fellas, it\'s time to get off of Instagram!'
+photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait_dark.jpg', 'assets/post_pics/zuck_portrait_light.png']
+random_photo_path = random.choice(photos) # Photo to be uploaded
+# 448 chars
+caption = "Hello fellas, it's time to get off Instagram.\nPROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\n#getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #biden #trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #cars #videogames #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #minecraft #eveonline #taylorswift #kendricklamar #drake"
 def Upload_Photo():
-    cl.photo_upload(photo_path, caption)
+    cl.photo_upload(random_photo_path, caption)
 
 # Upload a reel
-reel_path = 'assets/reelvid.mp4'
+reels = ['assets/reel_vids/car_reel.mp4', 'assets/reel_vids/zuck_reel.mp4']
+random_reel_path = random.choice(reels)
 thumbnail_path = 'assets/thumbnail.jpg'
-#usertags = [Usertag(user=USERNAME, x=0.1, y=0.1)]
-#location = Location(name='Russia, Saint-Petersburg', lat=59.96, lng=30.29)
+# usertags = [Usertag(user=USERNAME, x=0.1, y=0.1)]
+# location = Location(name='Russia, Saint-Petersburg', lat=59.96, lng=30.29)
 def Upload_Reel():
-    cl.clip_upload(reel_path, caption, thumbnail_path)
+    cl.clip_upload(random_reel_path, caption, thumbnail_path)
 
 # Organize songs
-songs = [Murder, Rokstarr, aisatsana]
+#ADD: Still Yung lean, Pray 4 Me Slimesito
+songs = [
+    Murder,
+    Rokstarr,
+    aisatsana,
+    Breathe,
+    ICE,
+    Pretty_Girls_Like_Anime,
+    Victorious,
+    THROW_UP,
+    Notes_From_A_Wrist,
+    All_I_Need,
+    Cities, 
+    Let_Go,
+    Purple_Substance
+]
 # Generating random number to choose song for reel
-random_song_num = random.randint(0, (len(songs) - 1))
+random_song = random.choice(songs)
 
 # Upload a reel with music
 def Upload_Reel_Music():
-   cl.clip_upload_as_reel_with_music(reel_path, caption, songs[random_song_num])
+  if random_reel_path == 'assets/reel_vids/zuck.mp4':
+    cl.clip_upload_as_reel_with_music(random_reel_path, caption, Candy_Shop)
+  else:
+    cl.clip_upload_as_reel_with_music(random_reel_path, caption, random_song)
 
 
-#commenting out the sleeps to test if my account will get suspended again after I sucessfully appealed against my account suspension
 # Control functions to be run
 def Run_IG_Posting():
+  print("Posting on Instagram...")
   Login()
-#   sleep(10) 
+  print("Logged in! Uploading photo...")
   Upload_Photo()
-#   sleep(10)
+  print("Uploading reel...")
   Upload_Reel_Music()
 
 
 # Find metadata for a song
 def Search_Music(song_to_search):
+    print("Searching music...")
     Login()
     #song_to_search = ""
     print(cl.search_music(song_to_search))
 
-
-if __name__ == "__main__":
+def main():
     Run_IG_Posting()
 
-    # print("Seaching music...")
-    # Search_Music('aisatsana [102] - Aphex Twin')
+    #Search_Music("purple substance") # <--- Put song to search here
+
+if __name__ == "__main__":
+  main()
