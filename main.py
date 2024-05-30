@@ -18,8 +18,8 @@ def Login():
 # Upload photo
 photos = ['assets/post_pics/hugging.png', 'assets/post_pics/zuck_alien.png', 'assets/post_pics/zuck_portrait_dark.jpg', 'assets/post_pics/zuck_portrait_light.png']
 random_photo_path = random.choice(photos) # Photo to be uploaded
-# 448 chars
-caption = "Hello fellas, it's time to get off Instagram.\nPROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\n#getoffinstagram #addiction #fyp #foryou #explore #reels #andrewtate #samsulek #biden #trump #monkey #monkeybrain #dopamine #scrolling #stopscrolling #coolvideo #funny #cars #videogames #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #minecraft #eveonline #taylorswift #kendricklamar #drake"
+# ? <448 chars
+caption = "Hello fellas, it's time to get off Instagram.\nPROTIP: Like this post so the algorithm gives you more of these posts in the future.\n.\n.\n.\n#getoffig #addiction #fyp #explore #reels #andrewtate #samsulek #biden #trump #monkeybrain #dopamine #scrolling #stopscrolling #funny #cars #videogames #fortnite #rocketleague #leagueoflegends #lol #gta5 #gta6 #civ6 #minecraft #eveonline #taylorswift #kendricklamar #drake"
 def Upload_Photo():
     cl.photo_upload(random_photo_path, caption)
 
@@ -35,9 +35,9 @@ def Upload_Reel():
 # Organize songs
 #ADD: Still Yung lean, Pray 4 Me Slimesito
 songs = [
-    Murder,
-    Rokstarr,
-    aisatsana,
+    # Murder,
+    # Rokstarr,
+    # aisatsana,
     Breathe,
     ICE,
     Pretty_Girls_Like_Anime,
