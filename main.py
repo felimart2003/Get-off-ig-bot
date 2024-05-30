@@ -48,7 +48,7 @@ songs = [
     Cities, 
     Let_Go,
     Purple_Substance
-    ]
+]
 # Generating random number to choose song for reel
 random_song = random.choice(songs)
 
@@ -56,7 +56,8 @@ random_song = random.choice(songs)
 def Upload_Reel_Music():
   if random_reel_path == 'assets/reel_vids/zuck.mp4':
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, Candy_Shop)
-  cl.clip_upload_as_reel_with_music(random_reel_path, caption, random_song)
+  else:
+    cl.clip_upload_as_reel_with_music(random_reel_path, caption, random_song)
 
 
 # Control functions to be run
