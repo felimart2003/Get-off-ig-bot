@@ -39,6 +39,6 @@ def clean_metadata(metadata):
     return metadata_obj
 
 def Get_Music():
-  print("Getting music for reel...")
-  song_metadata = get_metadata(random_song_name)
-  random_song = clean_metadata(song_metadata)
+    print("Getting music for reel...")
+    song_metadata = get_metadata(random_song_name)
+    random_song = clean_metadata(song_metadata)
