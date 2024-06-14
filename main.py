@@ -1,12 +1,11 @@
 import os # Github USERNAME, PASSWORD secret
 import random # Used to choose a random pic for post and song for reel
 
-# Import instagrapi
+# Import instagrapi - 3rd part IG API
 from instagrapi import Client
 
-# Import music tracks from tracks.py module
-# from tracks import *
-from get_song import Get_Music, random_song_name
+# Import music utilities from song_utils.py module
+from song_utils import SongUtils
 
 # Login to client
 cl = Client()
@@ -37,12 +36,13 @@ def Upload_Reel():
 # Upload a reel with music
 def Upload_Reel_Music():
   print("Uploading reel...")
+  song_tools = SongUtils(cl) # Initialize song_utils with instagrapi
   if random_reel_path == 'assets/reel_vids/zuck_reel.mp4':
-    track_metadata = Get_Music(cl, "Candy Shop - 50 Cent")
-    track_metadata.highlight_start_times_in_ms = [3500]
+    track_metadata = song_tools.get_music("Candy Shop - 50 Cent")
+    track_metadata.highlight_start_times_in_ms = [4100]
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
   else:
-    track_metadata = Get_Music(cl, random_song_name)
+    track_metadata = song_tools.get_music(song_tools.get_random_song())
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
 
 # Control functions to be run
