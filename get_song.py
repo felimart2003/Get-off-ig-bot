@@ -24,21 +24,12 @@ song_names = [
 random_song_name = random.choice(song_names)
 
 # Retrieve metadata for a song given a song name
-def get_metadata(song_title):
+def get_metadata(cl, song_title):
     print("Retrieving metadata for " + song_title + "...")
-    # Fetch the latest metadata for the song
     new_metadata = cl.search_music(song_title)[0]
     return new_metadata
 
-# Clean metadata from song so it can be used for instagrapi
-def clean_metadata(metadata):
-    metadata_str = str(metadata)
-    metadata_str = metadata_str.replace("Url(", "").replace(")", "").replace("territory_validity_periods={}", "territory_validity_periods={})")
-    # Revert metadata_str from str to object
-    metadata_obj = eval(metadata_str)
-    return metadata_obj
-
-def Get_Music():
+def Get_Music(cl, reel_song):
     print("Getting music for reel...")
-    song_metadata = get_metadata(random_song_name)
-    random_song = clean_metadata(song_metadata)
+    song_metadata = get_metadata(cl, reel_song)
+    return song_metadata

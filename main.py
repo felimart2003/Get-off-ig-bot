@@ -6,7 +6,7 @@ from instagrapi import Client
 
 # Import music tracks from tracks.py module
 # from tracks import *
-# from get_song import Get_Music
+from get_song import Get_Music, random_song_name
 
 # Login to client
 cl = Client()
@@ -38,53 +38,18 @@ def Upload_Reel():
 def Upload_Reel_Music():
   print("Uploading reel...")
   if random_reel_path == 'assets/reel_vids/zuck_reel.mp4':
-    track_metadata = Get_Music("Candy Shop - 50 Cent")
+    track_metadata = Get_Music(cl, "Candy Shop - 50 Cent")
     track_metadata.highlight_start_times_in_ms = [3500]
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
   else:
-    track_metadata = Get_Music(random_song_name)
+    track_metadata = Get_Music(cl, random_song_name)
     cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
-
-# --------------------------------------------------
-# Organize songs
-song_names = [
-    "Murder Sh!t - BIGBABYGUCCI",
-    "Rokstarr - Dro Kenji",
-    "aisatsana[102] - Aphex Twin",
-    "Breathe - Yeat",
-    "ICEWHORE! - Lumi Athena",
-    "Pretty Girls Like Anime - Kid J",
-    "Victorious - Yung Lean, Bladee",
-    "THROW UP - Dro Kenji",
-    "Notes From A Wrist - d4vid",
-    "All I Need - Slushii, Aviella",
-    "Cities - Throttle",
-    "Let Go - Duskus",
-    "Purple Substance - lil obnoxious",
-    "Cut - Duskus",
-    "Still - Yung Lean, Bladee",
-    "Pray 4 Me - Slimesito, Trippie Redd"
-]
-# Generating random number to choose song for reel
-random_song_name = random.choice(song_names)
-
-# Retrieve metadata for a song given a song name
-def get_metadata(song_title):
-    print("Retrieving metadata for " + song_title + "...")
-    new_metadata = cl.search_music(song_title)[0]
-    return new_metadata
-
-def Get_Music(reel_song):
-    print("Getting music for reel...")
-    song_metadata = get_metadata(reel_song)
-    return song_metadata
-# --------------------------------------------------
 
 # Control functions to be run
 def Run_IG_Posting():
   print("Running bot to post on Instagram...")
   Login()
-  Upload_Photo()
+  # Upload_Photo()
   Upload_Reel_Music()
   
 def main():
