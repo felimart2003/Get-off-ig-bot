@@ -1,5 +1,6 @@
 import os  # Github USERNAME, PASSWORD secret
 import random  # Used to choose a random pic for post and song for reel
+from time import sleep # Bypass bot detection from IG
 
 # Import instagrapi - 3rd part IG API
 from instagrapi import Client
@@ -70,21 +71,31 @@ def Upload_Reel_Music():
         print("Failed to upload reel with music, uploading normal reel instead...")
         Upload_Reel()
 
+def ran_sleep():
+    print("\n~~~~~ Sleeping for a random amount of time ~~~~~\n")
+    return sleep(random.uniform(11, 37))
 
 # Control functions to be run on IG Posting
 def Run_IG_Posting():
     print("Running bot to post on Instagram...")
     Login()
+    ran_sleep()
     Upload_Photo()
+    ran_sleep()
     Upload_Reel_Music()
     print("Done.")
 
+# Find metadata for a song
+def Search_Music(song_to_search):
+    print(f"Seaching music metadata for {song_to_search}")
+    Login()
+    #song_to_search = ""
+    print(cl.search_music(song_to_search))
 
 
 def main():
     Run_IG_Posting()
-    # Login()
-    # song_utils.SongUtils(cl).get_music_metadata("PINK FLOYD - JADY'S BIRTHDAY")
+    # Search_Music("") # <--- Put song here
 
 if __name__ == "__main__":
     main()
