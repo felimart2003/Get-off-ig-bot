@@ -57,10 +57,6 @@ class SongUtils:
         "Vroom Vroom - Logic, C Dot Castro, halfBREED",
         "PINK FLOYD - JADY'S BIRTHDAY",
         "FE!N - Travis Scott, Playboi Carti"
-<<<<<<< HEAD
-=======
-    ]
->>>>>>> 422ccff (Highlight start times for music)
     ]
 
     # Dictionary to map songs to their highlight start times
