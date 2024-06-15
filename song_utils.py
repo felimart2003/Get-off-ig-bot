@@ -57,8 +57,18 @@ class SongUtils:
         "Vroom Vroom - Logic, C Dot Castro, halfBREED",
         "PINK FLOYD - JADY'S BIRTHDAY",
         "FE!N - Travis Scott, Playboi Carti"
+<<<<<<< HEAD
+=======
+    ]
+>>>>>>> 422ccff (Highlight start times for music)
     ]
 
+    # Dictionary to map songs to their highlight start times
+    highlight_start_times = {
+        "Candy Shop - 50 Cent": [3925],
+        "PINK FLOYD - JADY'S BIRTHDAY": [3000]
+    }
+    
     @staticmethod
     def get_random_song():
         return random.choice(SongUtils.song_names)
@@ -77,6 +87,9 @@ class SongUtils:
     def get_music(self, song_title):
         print("Getting music for reel...")
         song_metadata = self.client.search_music(song_title)[0]
+        # Set specified start time of song
+        if song_title in self.highlight_start_times:
+            song_metadata.highlight_start_times_in_ms = self.highlight_start_times[song_title]
         return song_metadata
 
 random_song = SongUtils.get_random_song()

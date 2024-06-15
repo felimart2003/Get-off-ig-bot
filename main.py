@@ -59,7 +59,6 @@ def Upload_Reel_Music():
             track_metadata.highlight_start_times_in_ms = [3925]
             cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
         else:
-            # track_metadata = song_tools.get_music(song_tools.get_random_song())
             ran_song = song_utils.random_song
             track_metadata = song_tools.get_music(ran_song)
             if track_metadata == []:
