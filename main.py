@@ -60,6 +60,8 @@ def Upload_Reel_Music():
             cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
         else:
             ran_song = song_utils.random_song
+            # See the name of song if causing an issue
+            print(f"\n==============================\n{ran_song}\n==============================\n")
             track_metadata = song_tools.get_music(ran_song)
             if track_metadata == []:
                 print(f"Could not find track for {ran_song}")
