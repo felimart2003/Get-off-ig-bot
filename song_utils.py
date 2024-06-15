@@ -55,7 +55,8 @@ class SongUtils:
         "Adding - Yung Fazo, SoFaygo",
         "Hit My Dance - Mills",
         "Vroom Vroom - Logic, C Dot Castro, halfBREED",
-        "PINK FLOYD - JADY'S BIRTHDAY"
+        "PINK FLOYD - JADY'S BIRTHDAY",
+        "FE!N - Travis Scott, Playboi Carti"
     ]
 
     @staticmethod
