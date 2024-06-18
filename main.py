@@ -17,7 +17,7 @@ PASSWORD = os.getenv("PASSWORD")
 
 def Login():
     print("Logging in...")
-    cl.login(USERNAME, PASSWORD)
+    return cl.login(USERNAME, PASSWORD)
 
 
 # Upload photo
@@ -34,11 +34,11 @@ caption = "Hello fellas, it's time to get off Instagram.\nPROTIP: Like this post
 
 def Upload_Photo():
     print("Uploading photo...")
-    cl.photo_upload(random_photo_path, caption)
+    return cl.photo_upload(random_photo_path, caption)
 
 
 # Upload a reel (with original audio)
-reels = ["assets/reel_vids/car_reel.mp4", "assets/reel_vids/zuck_reel.mp4"]
+reels = ["assets/reel_vids/car_reel.mp4", "assets/reel_vids/zuck_reel.mp4", "assets/reel_vids/the_reels_addict.mp4"]
 random_reel_path = random.choice(reels)
 thumbnail_path = "assets/thumbnail.jpg"
 
@@ -47,7 +47,7 @@ thumbnail_path = "assets/thumbnail.jpg"
 # location = Location(name='Russia, Saint-Petersburg', lat=59.96, lng=30.29)
 def Upload_Reel():
     print("Uploading normal reel...")
-    cl.clip_upload(random_reel_path, caption, thumbnail_path)
+    return cl.clip_upload(random_reel_path, caption, thumbnail_path)
 
 
 # Upload a reel with music
@@ -58,7 +58,8 @@ def Upload_Reel_Music():
         if random_reel_path == "assets/reel_vids/zuck_reel.mp4":
             track_metadata = song_tools.get_music("Candy Shop - 50 Cent")
             track_metadata.highlight_start_times_in_ms = [3925]
-            cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
+        if random_reel_path == "assets/reel_vids/the_reels_addict.mp4":
+            track_metadata = song_tools.get_music("Nocturne in C-Sharp Minor - Frederic Chopin")
         else:
             ran_song = song_utils.random_song
             # See the name of song if causing an issue
@@ -66,7 +67,7 @@ def Upload_Reel_Music():
             track_metadata = song_tools.get_music(ran_song)
             if track_metadata == []:
                 print(f"Could not find track for {ran_song}")
-            cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
+        return cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
     except:
         print("Failed to upload reel with music, uploading normal reel instead...")
         Upload_Reel()
