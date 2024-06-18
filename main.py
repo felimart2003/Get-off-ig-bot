@@ -55,11 +55,14 @@ def Upload_Reel_Music():
     print("Uploading reel with music...")
     try:
         song_tools = song_utils.SongUtils(cl)  # Initialize song_utils with instagrapi
+        # Zuck - Candy Shop
         if random_reel_path == "assets/reel_vids/zuck_reel.mp4":
             track_metadata = song_tools.get_music("Candy Shop - 50 Cent")
             track_metadata.highlight_start_times_in_ms = [3925]
+        # Reels addict - Nocturne in C-Sharp Minor
         if random_reel_path == "assets/reel_vids/the_reels_addict.mp4":
             track_metadata = song_tools.get_music("Nocturne in C-Sharp Minor - Frederic Chopin")
+        # Random
         else:
             ran_song = song_utils.random_song
             # See the name of song if causing an issue
