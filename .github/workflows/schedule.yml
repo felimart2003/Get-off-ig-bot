@@ -1,29 +1,29 @@
-name: Schedule Instagram posts
+# name: Schedule Instagram posts
 
-on:
-  schedule:
-    - cron: '0 13,17,21,1,4 * * *' # UTC == EST+5 == EDT+4
+# on:
+#   schedule:
+#     - cron: '0 13,17,21,1,4 * * *' # UTC == EST+5 == EDT+4
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x' # Currently using Python 3.11.2
+#     - name: Set up Python
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: '3.x' # Currently using Python 3.11.2
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+#     - name: Install dependencies
+#       run: |
+#         python -m pip install --upgrade pip
+#         pip install -r requirements.txt
 
-    - name: Run script
-      run: python main.py
-      env:
-        USERNAME: ${{secrets.USERNAME}}
-        PASSWORD: ${{secrets.PASSWORD}}
+#     - name: Run script
+#       run: python main.py
+#       env:
+#         USERNAME: ${{secrets.USERNAME}}
+#         PASSWORD: ${{secrets.PASSWORD}}
