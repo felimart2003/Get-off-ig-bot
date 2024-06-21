@@ -86,7 +86,7 @@ def Run_IG_Posting():
     ran_sleep()
     Upload_Photo()
     ran_sleep()
-    Upload_Reel_Music()
+    #Upload_Reel_Music()
     print("Done.")
 
 # Find metadata for a song
