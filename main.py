@@ -59,6 +59,7 @@ def Upload_Reel_Music():
         if random_reel_path == "assets/reel_vids/zuck_reel.mp4":
             track_metadata = song_tools.get_music("Candy Shop - 50 Cent")
             track_metadata.highlight_start_times_in_ms = [3925]
+            return cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
         # Reels addict - Nocturne in C-Sharp Minor
         if random_reel_path == "assets/reel_vids/the_reels_addict.mp4":
             track_metadata = song_tools.get_music("Nocturne in C-Sharp Minor - Frederic Chopin")
@@ -73,7 +74,8 @@ def Upload_Reel_Music():
         return cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
     except:
         print("Failed to upload reel with music, uploading normal reel instead...")
-        Upload_Reel()
+        print(f"Reel: {random_reel_path}")
+        # Upload_Reel()
 
 def ran_sleep():
     print("\n~~~~~ Sleeping for a random amount of time ~~~~~\n")
@@ -99,7 +101,7 @@ def Search_Music(song_to_search):
 
 def main():
     Run_IG_Posting()
-    # Search_Music("") # <--- Put song here
+    # Search_Music("Pray 4 Me - Slimesito, Trippie Redd") # <--- Put song here
 
 if __name__ == "__main__":
     main()
