@@ -5,10 +5,10 @@ decorator==4.4.2
 idna==3.7
 imageio==2.34.1
 imageio-ffmpeg==0.4.9
-instagrapi==2.1.2
+instagrapi
 moviepy==1.0.3
-numpy==1.26.4
-pillow==10.3.0
+numpy
+pillow
 proglog==0.1.10
 pycryptodomex==3.20.0
 pydantic==2.7.1
