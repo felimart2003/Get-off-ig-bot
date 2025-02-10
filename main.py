@@ -4,6 +4,7 @@ from time import sleep # Bypass bot detection from IG
 
 # Import instagrapi - 3rd part IG API
 from instagrapi import Client
+from instagrapi.exceptions import TwoFactorRequired
 
 # Import music utilities from song_utils.py module
 import song_utils
@@ -17,7 +18,11 @@ PASSWORD = os.getenv("PASSWORD")
 
 def Login():
     print("Logging in...")
-    return cl.login(USERNAME, PASSWORD)
+    try:
+        cl.login(USERNAME, PASSWORD)
+    except TwoFactorRequired:
+        verification_code = input("Enter the 2FA verification code: ")
+        cl.login(USERNAME, PASSWORD, verification_code=verification_code)
 
 
 # Upload photo
@@ -72,8 +77,8 @@ def Upload_Reel_Music():
             if track_metadata == []:
                 print(f"Could not find track for {ran_song}")
         return cl.clip_upload_as_reel_with_music(random_reel_path, caption, track_metadata)
-    except:
-        print("Failed to upload reel with music, uploading normal reel instead...")
+    except Exception as e:
+        print(f"Failed to upload reel with music, uploading normal reel instead... Error: {e}")
         print(f"Reel: {random_reel_path}")
         # Upload_Reel()
 
