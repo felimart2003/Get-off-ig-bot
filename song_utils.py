@@ -55,7 +55,17 @@ class SongUtils:
         "Hit My Dance - Mills",
         "Vroom Vroom - Logic, C Dot Castro, halfBREED",
         "PINK FLOYD - JADY'S BIRTHDAY",
-        "FE!N - Travis Scott, Playboi Carti"
+        "FE!N - Travis Scott, Playboi Carti",
+        "What You Like - Logic1000, yune pinku",
+        "take it from the starz - Roman Nasenmensch, domi4wave",
+        "Phantom V1 - domi4wave, Roman Nasenmensch",
+        "Routines In The Night - Twenty One Pilots",
+        "World Tour (Aquafina) - Juice WRLD",
+        "Cavalier - Juice WRLD",
+        "VOLVER - Tainy, Skrillex",
+        "Celebrate (with Offset) - Juice WRLD, Offset",
+        "Baguettes in the Face (feat. NAV, Playboi Carti) - Mustard, NAV, Playboi Carti",
+        "Maze - Juice WRLD"
     ]
 
     # Dictionary to map songs to their highlight start times
