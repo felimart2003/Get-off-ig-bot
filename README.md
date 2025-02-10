@@ -12,5 +12,6 @@ Currently posts at 9am, 1pm, 5pm, 9pm, 12am EDT.
         `myenv\Scripts\activate`
       macOS/Linux:
         `source myenv/bin/activate`
-2. Install requirements with `python -m pip install -r requirements.txt`
-3. Run main.py with `python main.py`
+*3. You may have to update pip with `python.exe -m pip install --upgrade pip`
+4. Install requirements with `python -m pip install -r requirements.txt`
+5. Run main.py with `python main.py`
