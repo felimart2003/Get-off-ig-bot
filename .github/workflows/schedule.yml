@@ -2,7 +2,7 @@ name: Schedule Instagram posts
 
 on:
   schedule:
-    - cron: '0 13,17,21,1,4 * * *' # UTC == EST+5 == EDT+4
+    - cron: '0 13,1 * * *' # UTC == EST+5 == EDT+4
 
 jobs:
   build:
