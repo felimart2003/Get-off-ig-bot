@@ -44,7 +44,7 @@ def Upload_Photo():
 
 # Upload a reel (with original audio)
 reels = ["assets/reel_vids/car_reel.mp4", "assets/reel_vids/zuck_reel.mp4", "assets/reel_vids/the_reels_addict.mp4"]
-random_reel_path = random.choice(reels)
+random_reel_path = random.choices(reels, weights=[1, 1, 2], k=1)[0]
 thumbnail_path = "assets/thumbnail.jpg"
 
 
