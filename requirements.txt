@@ -1,5 +1,5 @@
 annotated-types==0.6.0
-certifi==2024.7.4
+certifi==2026.10.19
 charset-normalizer==3.3.2
 decorator==4.4.2
 idna==3.7
@@ -17,4 +17,4 @@ PySocks==1.7.1
 requests==2.32.2
 tqdm==4.66.4
 typing_extensions==4.11.0
-urllib3==2.2.2
+urllib3==2.8.0
